@@ -1,0 +1,227 @@
+body {
+    width: 300px;
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    box-sizing: border-box;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+/* Header Controls */
+.header-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 8px;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    font-size: 14px;
+    margin: 0;
+}
+
+.todo-input::placeholder {
+    color: #888;
+}
+
+.sort-button {
+    background: none;
+    border: none;
+    color: #888;
+    padding: 4px 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+}
+
+.sort-button:hover {
+    color: #e0e0e0;
+}
+
+/* Sort Menu */
+.sort-menu {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    background: #2d2d2d;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.sort-menu.show {
+    display: block;
+}
+
+.sort-option {
+    padding: 8px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #888;
+    white-space: nowrap;
+}
+
+.sort-option:hover {
+    background: #363636;
+    color: #e0e0e0;
+}
+
+.sort-option.active {
+    color: #8b3dff;
+}
+
+/* Todo List */
+#todo-list {
+    margin-top: 16px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0 8px;
+    padding: 0 4px;
+}
+
+.section-header .divider {
+    color: #888;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.collapse-btn {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 2px 8px;
+}
+
+.collapse-btn:hover {
+    color: #8b3dff;
+}
+
+/* Todo Items */
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 4px;
+    border-bottom: 1px solid #333;
+    gap: 8px;
+}
+
+.todo-item input[type="checkbox"] {
+    margin: 0;
+    accent-color: #8b3dff;
+}
+
+.todo-item span {
+    flex: 1;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.todo-item span.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 2px 6px;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+.todo-item:hover .delete-btn {
+    visibility: visible;
+}
+
+.delete-btn:hover {
+    color: #ff4444;
+}
+
+/* Todo Details */
+.todo-details {
+    display: none;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: #888;
+    background: #2d2d2d;
+    border-bottom: 1px solid #333;
+    outline: none;
+    white-space: pre-wrap;
+    margin-left: 24px;
+    min-height: 20px;
+}
+
+.todo-details.expanded {
+    display: block;
+}
+
+.todo-details:focus {
+    background: #363636;
+    color: #e0e0e0;
+}
+
+.todo-details:empty::before {
+    content: 'Add details...';
+    color: #666;
+    font-style: italic;
+}
+
+.todo-details:focus:empty::before {
+    content: '';
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+/* Add this to your existing styles */
+.empty-state {
+    color: #666;
+    font-size: 13px;
+    text-align: center;
+    padding: 16px;
+    font-style: italic;
+}
+
+.hidden {
+    display: none !important;
+}
+ 

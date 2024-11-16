@@ -1,0 +1,27 @@
+<div id="todo-section">
+  <div class="header-controls">
+    <input type="text" class="todo-input" placeholder="+ Add task">
+    <button class="sort-button">
+      <span>Sort</span>
+      <span>↓</span>
+    </button>
+  </div>
+  <div class="sort-menu">
+    <div class="sort-option" data-sort="time-desc">Newest First</div>
+    <div class="sort-option" data-sort="time-asc">Oldest First</div>
+    <div class="sort-option" data-sort="alpha-asc">A to Z</div>
+    <div class="sort-option" data-sort="alpha-desc">Z to A</div>
+  </div>
+  <div id="todo-list">
+    <div class="section-header" data-section="active">
+      <span class="divider">Active Tasks</span>
+      <button class="collapse-btn" data-section="active">Collapse All</button>
+    </div>
+    <div id="active-tasks"></div>
+    <div class="section-header" data-section="completed">
+      <span class="divider">Completed</span>
+      <button class="collapse-btn" data-section="completed">Collapse All</button>
+    </div>
+    <div id="completed-tasks"></div>
+  </div>
+</div> 

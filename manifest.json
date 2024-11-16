@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Todo List",
+  "description": "A simple and elegant todo list manager",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+    }
+  },
+  "permissions": ["storage"],
+  "web_accessible_resources": [{
+    "resources": ["task.html"],
+    "matches": ["<all_urls>"]
+  }]
+}
