@@ -139,7 +139,7 @@ function addTodoElement(todo, container) {
         <input type="checkbox" ${todo.completed ? 'checked' : ''}>
         <span class="${todo.completed ? 'completed' : ''}">${todo.text}</span>
         <div class="todo-actions">
-            <button class="delete-btn" title="Delete task">✕</button>
+            <button class="delete-btn" title="Delete task">X</button>
         </div>
     `;
 
